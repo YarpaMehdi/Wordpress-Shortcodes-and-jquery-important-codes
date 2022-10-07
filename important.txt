@@ -1,0 +1,634 @@
+header sticky
+hover effects
+button hover effects
+
+
+
+Contact form Mail setting
+1)	To-zohaib@wamztech.com
+2)	From-Anaxdesigns <zohaib@wamztech.com>
+3)	subject-Career Form(your subject name)
+4)	Additional headers-(empty)
+5)	Message body-{
+<html>
+<head>
+<style>
+table { width: 100%; }
+table, th, td { border: 1px solid #bbbbbb; border-collapse: collapse; padding: 8px 10px; font-family: arial; text-align: left; }
+</style>
+</head>
+<body>
+<table>
+<tbody>
+<tr><th>NAME: </th>                  <td>[text-921]</td></tr>
+<tr><th>Last Name: </th>                  <td>[text-991]</td></tr>
+<tr><th>GENDER: </th>                <td>[text-791]</td></tr>
+<tr><th>DATE OF BIRTH:   </th>      <td>[date-775]</td></tr>
+</table>
+</tbody>
+</body>
+</html>
+}
+6)	check on (use HTML content type)
+
+
+
+=======================================
+Dynamic Menu
+
+<?php
+	$defaults = array(
+	'theme_location'  => '',
+	'menu'            => 'main_menu',
+	'container'       => '',
+	'container_class' => '',
+	'container_id'    => '',
+	'menu_class'      => '',
+	'menu_id'         => '',
+	'echo'            => true,
+	'fallback_cb'     => '',
+	'before'          => '',
+	'after'           => '',
+	'link_before'     => '',
+	'link_after'      => '',
+	'items_wrap'      => '<ul>%3$s</ul>',
+	'depth'           => 5,
+	'walker'          => ''
+	);
+	wp_nav_menu($defaults); 
+?>
+======================================================
+
+Custome theme Options
+<?php echo $options['logourl']?>
+1)Phone=  <?php echo $options['phnOpt']  ?>
+2)Email=  <?php echo $options['emlOpt']  ?>
+3)logo=   <?php echo $options['logourl'] ?>
+4)footerlogo= <?php echo $options['flogourl'] ?>
+3)Address=  <?php echo $options['addressOpt'] ?>
+4)footertext=  <?php echo $options['ftrText'] ?>
+5)Copyright=  <?php echo $options['cpyrt'] ?>
+6)design by=  <?php echo $options['designby']  ?>
+7)LogoImageURL=  <?php echo $options['logourl']  ?>
+8)facebookURL=   <?php echo $options['fburl']  ?>
+9)TwitterURL=    <?php echo $options['twtrurl']  ?>	
+10)InstagramURL= <?php echo $options['insturl']  ?>
+11)Linkedin = <?php echo $options['linkurl']  ?>
+11)WorkingHours=<?php echo $options['timopt']  ?>
+12)siteUrl=<?php echo get_site_url(); ?>
+13)Headertext=<?php echo $options['hdrText']  ?>
+14)geturl in custom post='. get_site_url() .'/services/
+============================================================
+PLUGINS
+map plugin
+name= wp google maps
+------------------------
+For Duplicate post or pages
+name=Duplicate Page
+--------------------
+slider plugin
+name= Getwid
+------------------
+woocommerce products filters
+name=BeRocket
+
+newsletter plugin
+name= MailPoet
+
+post order plugin
+name= Post Types Order
+
+All wordpress importer
+name = All-in-One WP Migration
+
+=============================================================
+shortcode without PHP tage
+[gallery_shortcode]
+==========================================================
+shortcode with php tag
+<?php echo do_shortcode("[mailpoet_form id='0']"); ?>
+========================================================
+getwid setting
+.main-slider .slick-slide { height: 100vh;}
+.banner_text {max-width: 1200px;margin: 0 auto;}
+.banner_text .theme_btn{display: inline-block;}
+
+
+.main-slider .slick-slide .wp-block-group.slider-txt { position: static;}
+.main-slider {overflow: hidden;}
+.main-slider .wp-block-getwid-media-text-slider-slide-content__media-overlay {background: transparent;opacity: 1;}
+
+
+text styling
+.main-slider .slick-slide { height: 100vh;cursor:pointer;}
+.banner_text {max-width: 1200px;margin: 0 auto;}
+.main-slider .slick-active .banner_text h1 {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; animation-name: fadeInLeft; animation-delay: 1.3s;}
+.main-slider .slick-active .banner_text  p{-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; animation-name: fadeInRight; animation-delay: 1.3s;}
+.main-slider .slick-active .banner_text .theme_btn {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; animation-name: fadeInLeft; animation-delay: 1.3s;}
+
+
+getwid dots style
+.wp-block-group.main-slider .slick-dots li button:before {color: #fff;width: 30px;height: 3px;background: #fff;opacity: 1;font-size: 0;transition: all 0.3s ease 0s;}
+.wp-block-group.main-slider .slick-dots li.slick-active button:before {background: #ff6a28;transition: all 0.3s ease 0s;}
+.wp-block-group.main-slider .slick-dots li {margin-right: 20px;}
+
+
+getwid nav style
+.wp-block-group.main-slider button.slick-prev::after {left: 0;}
+.wp-block-group.main-slider button.slick-next::after {right: 0;transform: rotate(180deg);}
+.wp-block-group.main-slider button.slick-arrow::after {content: "\f104";font: normal normal normal 14px/1 FontAwesome;position: absolute;width: 20px;height: 40px;font-size: 40px;color: #000;line-height: 40px;opacity: 0;visibility: hidden;transition: all 0.3s ease 0s;}
+.wp-block-group.main-slider:hover  button.slick-arrow::after {visibility: visible;opacity: 1;transition: all 0.3s ease 0s;}
+.wp-block-group.main-slider button.slick-arrow:hover::after{color:#fff;}
+.wp-block-group.main-slider button.slick-arrow::before {font-size: 0;}
+
+===========================================================
+teamwork password
+mehdi@wamztech.com
+Mehdi@786
+==========================================================
+
+Wp-admin User
+admin
+Wp-admin Password:
+6A5UEV4T3s3zAe7j7wSIF#9j
+y6FD1mXVNj1UpSIKgbpwLA(6
+Q!ZBfMp0Y!Ai3W9*UnOlGdvC
+mcdc=13ydXLAX8JQ^lGpMJmYtnRz4
+
+==================================================
+
+===============================================================
+Media Queris
+
+@media (min-width: 0px) and (max-width: 767px){}
+@media (min-width: 768px) and (max-width: 1023px){}
+@media (min-width: 1024px) and (max-width: 1440px){}
+
+========================================================================================
+constant image in custome post
+<figure><img src="'.get_template_directory_uri().'/assets/images/semicolon.png"></figure>
+
+===========================================================================================
+Custome Field
+$the_icon = get_post_meta(get_the_id(), 'icon', true);
+
+===========================================================================================
+how to add products custome
+
+fisrt add this shortcode
+[products limit="12" columns="1" orderby="popularity" category="pigs"]
+
+agar products carousel pe hia to apko 
+phly ak new class add karni parygi e.g
+$(".home-products ul.products").addClass("homeproduct owl-carousel owl-theme wow fadeInDown");
+phir slider ky code ko is code ky nichay paste karo
+
+===========================================================================================
+
+
+
+Search option
+<div class="searchFrm">
+	<a href="javascript:;" class="clseBtn"></a>
+	<?php get_search_form() ?>
+</div>
+=========================================================================================
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/xJquery.js"></script>
+
+=========================================================================================
+invert
+filter: saturate(1%) brightness(1000%);
+
+custome filter
+https://codepen.io/sosuke/pen/Pjoqqp
+
+=========================================================================================
+
+SUBMENU
+nav ul li.menu-item-has-children {position: relative;}
+nav ul li.menu-item-has-children .sub-menu {position: absolute;top: 28px;left: 0;z-index: 9;min-width: 350px;background: #fff;opacity: 0;visibility: hidden;}
+nav ul li.menu-item-has-children .sub-menu li {display: block;text-align: left;}
+nav ul li.menu-item-has-children:hover .sub-menu {opacity: 1;visibility: visible;}
+nav ul li.menu-item-has-children .sub-menu li.menu-item-has-children .sub-menu {position: absolute;left: 130px;top: 0;background: #ccc;opacity: 0;visibility: hidden;}
+nav ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover .sub-menu {opacity: 1;visibility: visible;}
+
+=========================================================================================
+
+=========================================================================================
+
+linking pages through php
+<a href="<?php echo get_site_url(); ?>/about-us/">
+
+=========================================================================================
+
+Mobile Menu functions
+
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+
+
+
+$(".close-icon").click(function(){
+  $(".main-nav").hide();
+});
+
+$(".mobile-menu").click(function(){
+  $(".main-nav").show();
+});
+
+animated div using jquery
+	$( ".get-menu" ).click(function() {	
+	$('.mobileheader').animate({left: '0'},400);
+	});
+	$( ".cls-menu" ).click(function() {
+		
+		$('.mobileheader').animate({left: '-100%'},300);
+	});
+	
+===========================================================================
+
+	$('body').delegate('header ul li.menu-item-has-children','click', function(){
+    	var $ths = $(this);
+    	if(!$ths.hasClass('active')){
+    		$('header .mobmenu .menu-item-has-children').removeClass('active');
+    		$('header .mobmenu .menu-item-has-children .sub-menu').slideUp();
+    		$ths.closest('header .mobmenu .menu-item-has-children').find('ul.sub-menu').slideDown();
+    		$ths.addClass('active');
+    	}else{
+        	$ths.closest('header .mobmenu .menu-item-has-children').find('ul.sub-menu').slideUp();
+    		$ths.removeClass('active');
+    	}
+    	
+    })
+=========================================================================================
+	
+MOBILE MENU STYLYING
+headersection
+----------------
+.mobile-menu ,.close-icon {display: none;}
+
+
+mobile section
+--------------
+.mobile-menu ,.close-icon {display: block;}
+.main-logo {max-width: 70%;}
+.main-nav {display: none;}
+.mobile-menu {position: absolute;right: 10px;top: 10px;}
+.mobile-menu i {font-size: 30px; color: #89cff0;}
+
+.minimenu {text-align: center;position: fixed;background: #141c25b5;width: 100%;height: 100%;top: 0;left: 0;transition: linear 0.3s;z-index:1;}
+.minimenu > ul {margin-top: 50px;}
+.minimenu ul li a { color: #fff;text-transform: uppercase;}
+.minimenu ul li { display: block;text-align: left; padding: 5px 0;}
+.close-icon {position: absolute;right: 10px;top: 18px;transition: linear 0.5s;}
+.close-icon i {font-size: 30px;color: #fff;}
+=========================================================================================
+
+owl-carousel auto height
+
+autoHeight:true,
+=========================================================================================
+
+Owl-carousel nav icon
+
+navText: [ '<span class="flaticon-back-1"></span>', '<span class="flaticon-arrow-pointing-to-right"></span>' ],
+====================================================================================================================
+
+
+Current page active styling
+
+.main-menu ul li a:hover:before,  .main-menu ul li.current-menu-item a:before {transition: linear 0.3s; width: 85%;}
+
+===================================================================================================================================
+
+Gallery stying
+
+script
+-----
+$('.testigallery a').attr('data-fancybox', 'testigaller');
+
+.testigallery figure a {position: relative;display: block;}
+.testigallery figure a:before {opacity: 0;position: absolute;top: -30%;left: 0;margin: auto;bottom: 0;right: 0;height: 90%;content: "";background:rgb(0 0 0 / 0.7);width: 90%;z-index: 1;transition: linear 0.3s;}
+.testigallery figure a:after {opacity: 0;content: "\f05b";color: #fff;font-size: 40px;text-align: center;font-weight: 400;position: absolute;top: 0;left: 0;margin: auto;bottom:-50%;right: 0;font-family: FontAwesome;height: 42px;z-index:2;transition: linear 0.3s;}
+.testigallery  figure:hover a:before, .testigallery  figure:hover a:after {opacity: 1;top: 0;bottom: 0;}
+.testigallery figure {width: 100%;transition: linear 0.3s;}
+
+========================================================================================================================================================================================================================================
+
+
+========================================================================================================================================================================================================================================
+Search setting Css
+
+.searchFrm { display: none; z-index: 100; width: 100%; margin: 0; text-align: center; position: fixed; top: 0; left: 0; background: rgb(0 0 0/0.75); padding: 25px 0; }
+.searchFrm .clseBtn { position: absolute; top: 37px; right: 10px; color: #fff; font-size: 30px; width: 35px; height: 35px; }
+.searchFrm .clseBtn:after,
+.searchFrm .clseBtn:before { content:""; position:absolute; width:1px; height:35px; background:#fff; left:15px; top:0; }
+.searchFrm .clseBtn:after { transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+.searchFrm .clseBtn:before { transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.searchFrm form { width: 100%; max-width: 700px; border: 1px solid #fff; background: #fff; display: inline-block; position: relative; }
+.searchFrm .search-submit { position: absolute; top: 0; right: 0; width: 50px; height: 100%; background: #000; }
+.searchFrm .search-submit span.screen-reader-text:before { content: "\f002"; font: normal 17px/1 FontAwesome; color: #fff; }
+.searchFrm label>span.screen-reader-text { display: none; }
+.searchFrm label { width: 100%; display: block; margin: 0; height: 100%; }
+.searchFrm label .search-field { height: auto; padding: 15px 45px 15px 20px; width: 100%; font-weight: 400; }
+.searchFrm .search-submit .screen-reader-text { position: relative !important; width: auto; font-size: 0; clip-path: none; }
+#primary.content-area article {width: 100%;border-bottom: 1px solid #000;padding: 30px 0;}
+
+Script
+----------
+$('.srchBtn').click(function(e){$('.searchFrm').stop(0,0).fadeToggle();});
+$('.clseBtn').click(function(e){$('.searchFrm').stop(0,0).fadeOut();});
+
+PHP
+---
+<?php get_search_form() ?>
+
+
+HTML
+----
+<i class='bx bx-search-alt'></i>
+
+<div class="searchFrm">
+  <a href="javascript:;" class="clseBtn"></a>
+  <?php get_search_form() ?>
+</div>
+
+========================================================================================================================================================================================================================================
+
+Inner page setting
+========================================================================================================================================================================================================================================
+	
+<div class="inner-banner">
+		<div class="container">
+			<h3><?php the_title(); ?></h3>
+			<ul class="breadcumb">
+				<li><a href="<?php echo get_site_url(); ?>">Home</a></li>
+				<li><span class="sep"><i class="fa fa-angle-right"></i></span></li>
+				<li><span><?php the_title(); ?></span></li>
+			</ul><!-- /.breadcumb -->
+		</div><!-- /.container -->
+</div>
+
+========================================================================================================================================================================================================================================
+Other Option
+		$('#selectBox').change(function(){
+			var src = $(this).val();
+			if(src == "other"){
+			   $('#disp').fadeIn();
+			}else{
+				 $('#disp').fadeOut();
+			}
+		});
+
+
+
+========================================================================================================================================================================================================================================
+
+Scroll header
+
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed ');
+  else sticky.removeClass('fixed');
+});
+
+
+CSS
+.fixed {position: fixed;top:0; left:0;width: 100%;  z-index:999;opacity:1;visibility:visible;-ms-animation-name: fadeInDown;-moz-animation-name: fadeInDown;-op-animation-name: fadeInDown;-webkit-animation-name: fadeInDown;animation-name: fadeInDown;-ms-animation-duration: 500ms;-moz-animation-duration: 500ms;-op-animation-duration: 500ms;-webkit-animation-duration: 500ms;animation-duration: 500ms;-ms-animation-timing-function: linear;-moz-animation-timing-function: linear;-op-animation-timing-function: linear;-webkit-animation-timing-function: linear;animation-timing-function: linear;-ms-animation-iteration-count: 1;-moz-animation-iteration-count: 1;-op-animation-iteration-count: 1;-webkit-animation-iteration-count: 1;animation-iteration-count: 1;background: #03103d;-webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 5%); box-shadow: 0px 5px 15px rgb(0 0 0 / 5%);  }
+
+
+========================================================================================================================================================================================================================================
+
+Counter
+var a = 0;
+$(window).scroll(function () {
+    var oTop = $("#counter-box").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $(".counter").each(function () {
+            var $this = $(this),
+                countTo = $this.attr("data-number");
+            $({
+                countNum: $this.text()
+            }).animate(
+                {
+                    countNum: countTo
+                },
+
+                {
+                    duration: 850,
+                    easing: "swing",
+                    step: function () {
+                        //$this.text(Math.ceil(this.countNum));
+                        $this.text(
+                            Math.ceil(this.countNum).toLocaleString("en")
+                        );
+                    },
+                    complete: function () {
+                        $this.text(
+                            Math.ceil(this.countNum).toLocaleString("en")
+                        );
+                        //alert('finished');
+                    }
+                }
+            );
+        });
+        a = 1;
+    }
+});
+
+HTML
+        <div id="counter-box">
+            <h3>TITLE</h3><span class="counter" data-number="150000"></span>
+            <p>FIRST LINE OF COPY</p>
+        </div>
+
+        <div id="counter-box">
+            <h3>TITLE</h3><span class="counter" data-number="2000"></span>
+            <p>FIRST LINE OF COPY<br> SECOND LINE OF COPY</p>
+        </div>
+
+
+
+========================================================================================================================================================================================================================================
+
+banner owl-carousel dots css
+
+.banner .owl-dots { position: absolute; bottom: 50px; left: 0; right: 0; background: transparent;margin: 0 auto; text-align: center;}
+.banner .owl-dots button.owl-dot { background: #fff; width: 10px;height: 10px;margin-right: 10px;border-radius: 50%;}
+.banner button.owl-dot.active {width: 50px;border-radius: 5px;transition: linear 0.3s;}
+
+========================================================================================================================================================================================================================================
+
+footer themeoptions
+ html=>
+
+						<tr class="img">
+							<th>Footer Logo Image URL:</th>
+							<td>
+								<img class="footers_logo" src="<?php esc_attr_e( $options['flogourl'] ); ?>" height="50" width="50"/>
+								<input class="footers_logo_url" type="text" name="sample_theme_options[flogourl]" value="<?php esc_attr_e( $options['flogourl'] ); ?>">
+								<a href="#" class="footers_logo_upload btn">Upload</a>
+							</td>
+						</tr>
+
+jquery=>
+
+     jQuery('.footers_logo_upload').click(function(e) {
+			e.preventDefault();
+			var custom_uploader = wp.media({
+				title: 'Custom Image',
+				button: { text: 'Upload Image' },
+				multiple: false  // Set this to true to allow multiple files to be selected
+			}).on('select', function() {
+				var attachment = custom_uploader.state().get('selection').first().toJSON();
+				jQuery('.footers_logo').attr('src', attachment.url);
+				jQuery('.footers_logo_url').val(attachment.url);
+			}).open();
+		});	
+
+========================================================================================================================================================================================================================================
+
+.searchFrm form:before {font: normal normal normal 14px/1 FontAwesome; content: "\f002"; right: 0; position: absolute; background: #000; color: #fff; width: 50px; height: 56px;z-index: 0;line-height: 56px;}
+========================================================================================================================================================================================================================================
+
+custome post set image by string
+<img src="'.get_template_directory_uri().'/assets/images/text.png">
+
+========================================================================================================================================================================================================================================
+
+/* Checkout input field placeholder */ 
+
+add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
+function override_billing_checkout_fields( $fields ) {
+	$fields['billing']['billing_first_name']['placeholder'] = 'First Name *';
+	$fields['billing']['billing_last_name']['placeholder'] = 'Last Name *';
+	$fields['billing']['billing_company']['placeholder'] = 'Company';
+	$fields['billing']['billing_country']['placeholder'] = 'Country *';
+	$fields['billing']['billing_address_1']['placeholder'] = 'Street Address *';
+	$fields['billing']['billing_city']['placeholder'] = 'Town / City *';
+	$fields['billing']['billing_state']['placeholder'] = 'State *';
+	$fields['billing']['billing_postcode']['placeholder'] = 'ZIP *';
+	$fields['billing']['billing_phone']['placeholder'] = 'Phone (optional)';
+	$fields['billing']['billing_email']['placeholder'] = 'Email Address *';
+	$fields['shipping']['shipping_first_name']['placeholder'] = 'First Name *';
+	$fields['shipping']['shipping_last_name']['placeholder'] = 'Last Name *';
+	$fields['shipping']['shipping_country']['placeholder'] = 'Country *';
+	$fields['shipping']['shipping_address_1']['placeholder'] = 'Street Address *';
+	$fields['shipping']['shipping_city']['placeholder'] = 'Town / City *';
+	$fields['shipping']['shipping_state']['placeholder'] = 'State *';
+	$fields['shipping']['shipping_postcode']['placeholder'] = 'ZIP *';
+    return $fields;
+}
+
+========================================================================================================================================================================================================================================
+shoping cart custom html
+
+
+HTML
+<div class="outer-box">
+   <!-- Shoppping Car -->
+    <div class="cart-btn">
+        <a href="<?php echo get_site_url(); ?>/cart/"><i class="fa fa-shopping-bag"></i> 
+		<span class="count">
+		<?php global $woocommerce; ?>
+		<?php echo sprintf(_n('%d hello', '%d hellos', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+		<strong><?php echo $woocommerce->cart->get_cart_total(); ?></strong>
+		</span>
+	</a>
+     </div>
+
+                        
+</div>
+
+menu cart icon css
+
+.outer-box {position: absolute;display: flex;align-items: center;right: 20px;top: 72px;}
+.cart-btn {position: relative;margin-right: 25px; padding: 0;}
+.cart-btn a {position: relative; display: block; height: 40px; width: 40px;text-align: center;line-height: 40px; font-size: 25px;color: #ffffff;z-index: 9;}
+.cart-btn .count {position: absolute;right: 6px;top: 4px;height: 16px;width: 16px; text-align: center;line-height: 16px; font-size: 10px; color: #000; background-color: #fff;border-radius: 50%;}
+.cart-btn .count strong { background: #809dc0; min-width: 100px; max-width: 100px; display: block; padding: 10px 0; border-radius: 4px; font-size: 13px; font-weight: 300;position: absolute;top: 70px; right: -31px;color: #fff; opacity: 0; visibility: hidden;transition: linear 0.2s;}
+.cart-btn .count strong:before {content: "\f0d8";font-family: 'FontAwesome';position: absolute;top: -13px;left: 0;right: 0;margin: 0 auto;font-size: 30px;color: #809dc0;}
+.cart-btn a i{color:#fff;font-size: 16px;margin-right: 20px;}
+.mini-menu li:last-child {margin-right: 80px;}
+.cart-btn:hover .count strong { top: 40px;visibility: visible;opacity: 1;transition: linear 0.2s;}
+
+========================================================================================================================================================================================================================================
+
+
+/*Add Picture on Video*/
+<video width="320" height="240" poster="/images/w3schools_green.jpg" controls>
+   <source src="movie.mp4" type="video/mp4">
+   <source src="movie.ogg" type="video/ogg">
+   Your browser does not support the video tag.
+</video>
+
+========================================================================================================================================================================================================================================
+
+DIV Hover Effect CSS
+
+.gallery-col { padding: 0 10px; transition: all 250ms linear; border: 1px solid transparent; }
+.gallery-col:hover { border: 1px solid #DCDCDC; box-shadow: inset 0 0 20px #cccccc9e; height: 100%; }
+
+========================================================================================================================================================================================================================================
+
+show product short discription shortcode
+
+add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 );
+function woo_show_excerpt_shop_page() {
+	global $product;
+
+	echo $product->post->post_excerpt;
+}
+========================================================================================================================================================================================================================================
+
+increase uploading limit/size
+
+step 1 => goto .htaccess file (which is located in below wp-includes folder)
+step 2 => past this code in </IfModule>
+
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+
+========================================================================================================================================================================================================================================
+
+animation CSS
+1)animation: pulse 1s linear infinite;
+-----------------------------------------------------------------
+2)transform: rotateY(180deg);transition: all 500ms ease;
+-----------------------------------------------------------------
+3)rotate text,image etc
+    animation-name: rotateme;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotateme;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+-----------------------------------------------------------------
+
+========================================================================================================================================================================================================================================
+
+hide contact contact form submit message after sometime
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '86' == event.detail.contactFormId ) {
+        setTimeout(function(){
+			  $(".wpcf7-response-output").fadeOut();
+		   },5000);
+		}
+	}, false );
+
+========================================================================================================================================================================================================================================

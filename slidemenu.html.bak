@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initialscale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+body{ margin: 0;padding: 0;font-family: sans-serif; }
+.slidemenu{position: absolute; top: 0;left: -250px;width: 250px; height: 100%; background: #262626;transition: 0.3s; } 
+.slidemenu.enjoy{ left: 0; } 
+.slidemenu ul{ margin: 60px 0; padding: 0; } 
+.slidemenu ul li{ list-style: none; } 
+.slidemenu ul li a{display: block; color: #fff; text-decoration: none;text-align: center; transition: 0.3s;font-size: 1.5em; margin-bottom: 25px; padding: 10px 20px; } 
+.slidemenu ul li a:hover{ background: #fff; color: #262626;} 
+.slidebarbtn{position: absolute;top: 0; right: -50px; width: 50px;height: 50px;background: #f5f5f5;outline: none;border: none; transition: 0.3s; } 
+.hamburger{position: absolute;top: 50%;left: 50%transform: translate(-50%,-50%);width: 40px;transition: 0.3s;box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); height: 3px;background: #262626; }
+.hamburger::after{ top: 12px; }
+.hamburger::before{ top: -12px; } 
+.hamburger::after,.hamburger::before{ position: absolute; content: '';  width: 40px; height: 3px;background: #262626; left: 0;  transition: 0.3s;  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); } 
+.slidebarbtn.active .hamburger{ background: none; box-shadow: none; }
+.slidebarbtn.active .hamburger::after{ top: 0; transform: rotate(-45deg); } 
+.slidebarbtn.active .hamburger::before{ top: 0; transform: rotate(45deg); }
+	</style>
+</head>
+
+<body>
+	<div class="slidemenu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Term</a></li>
+			</ul>
+			<button class="slidebarbtn">
+				<div class="hamburger"> </div>
+			</button>
+	</div>
+</body>
+	<script>
+	$(document).ready(function() {
+		$('.slidebarbtn').click(function() {
+			$('.slidebarbtn').toggleClass('active');
+			$('.slidemenu').toggleClass('enjoy');
+		})
+	})
+	</script>
+</html>

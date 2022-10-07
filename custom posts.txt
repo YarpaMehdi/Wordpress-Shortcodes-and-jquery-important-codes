@@ -1,0 +1,266 @@
+/*==== Testimonal ======*/
+function testimonal_posttype() {
+	register_post_type( 'testimonal',
+		array( 
+			'labels' => array( 'name' => __( 'Our testimonal' ), 'singular_name' => __( 'testimonal' ) ),'show_in_rest' => false,
+			'taxonomies' => array('testimonal-category'),
+			'public' => true, 'has_archive' => true, 'rewrite' => array('slug' => 'testimonal'),
+		)
+	);
+}
+add_action( 'init', 'testimonal_posttype' );
+function testimonal_post_type() {
+	$args = array(
+        'supports' => array( 'title', 'thumbnail', 'excerpt','custom-fields' ), 'has_archive' => "product", 'taxonomies' => array( 'category'  => 'info-cate' ),
+    );
+    register_post_type( 'testimonal', $args );
+}
+add_action( 'init', 'testimonal_post_type', 0 );
+
+
+function testimonal_section(){ 
+	$string .='<div class="row tst-slider">';
+		$args = array('post_type' => 'testimonal', 'posts_per_page' => '8');
+		$loop = new WP_Query( $args );
+		while( $loop->have_posts()) {
+		$loop->the_post();			
+		$url=wp_get_attachment_url( get_post_thumbnail_id(get_the_id()),'thumbnail');
+		$the_title = get_the_title();
+		$the_permalink = get_the_permalink();
+		$content = get_the_content();
+		$the_content = substr($content, 0, 115);
+		$the_price = get_post_meta(get_the_id(), 'Price', true);
+		$the_excerpt = get_the_excerpt();
+		$string .= '                    <div class="swiper-container testimonials-slider">
+                        <div class="testi-slider owl-carousel owl-theme">
+                            <div class="swiper-slide">
+                                <div class="slider-item">
+                                    <img src="'.$url.'" alt="img">
+                                    <div class="test-txt">
+                                        <h3>'.$the_title.'</h3>
+                                        <p class="white-p">'.$the_excerpt.'</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+		
+	} $string .= '</div>';
+ 
+return $string; } add_shortcode('testimonal_shortcode','testimonal_section');
+===============================================================================================================================================
+===============================================================================================================================================
+/*==== Serivce POST ======*/
+function service_posttype() {
+	register_post_type( 'service',
+		array( 
+			'labels' => array( 'name' => __( 'Our Services' ), 'singular_name' => __( 'service' ) ), 'show_in_rest' => true,
+			'public' => true, 'has_archive' => true, 'rewrite' => array('slug' => 'service'), 'taxonomies' => array( 'category' ),
+		)
+	);
+}
+add_action( 'init', 'service_posttype' );
+function service_post_type() {
+	$args = array(
+        'supports' => array( 'title', 'thumbnail', 'excerpt' ),  'has_archive' => "service", 'taxonomies' => array( 'category' ),
+    );
+    register_post_type( 'service', $args );
+}
+add_action( 'init', 'service_post_type', 0 );
+
+function serivce_section(){ 
+	
+	$string .='<div class="row">';
+		$args = array('post_type' => 'service', 'posts_per_page' => '4');
+		$loop = new WP_Query( $args );
+		while( $loop->have_posts()) {
+		$loop->the_post();			
+		$url=wp_get_attachment_url( get_post_thumbnail_id(get_the_id()),'thumbnail');
+		$the_title = get_the_title();
+		$the_permalink = get_the_permalink();
+		$content = get_the_content();
+		$the_content = substr($content, 0, 115);
+		$the_excerpt = get_the_excerpt();
+		$the_icon = get_post_meta(get_the_id(), 'icon', true);
+		$string .= '<div class="col-sm-6 col-lg-3">
+				<div class="service-item">
+					<div class="service-top">
+						<a href="'.$the_permalink.'">
+							<img src="'.$url.'">
+						</a>
+					</div>
+					<div class="service-bottom">
+						<h3>
+							<a href="'.$url.'">'.$the_title.'</a>
+						</h3>
+						<a class="service-link" href="'.$url.'">
+							<i class="bx bx-plus"></i>
+						</a>
+					</div>
+				</div>
+			</div>';
+		
+	} $string .= '</div>';
+ 
+return $string; } add_shortcode('service_shortcode','serivce_section');
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+/*==== Serivce POST with custome field ======*/
+function serivce_posttype() {
+	register_post_type( 'serivce',
+		array( 
+			'labels' => array( 'name' => __( 'Our serivce' ), 'singular_name' => __( 'serivce' )), 'show_in_rest' => true,
+			'taxonomies' => array('serivce-category'),
+			'public' => true, 'has_archive' => true, 'rewrite' => array('slug' => 'serivce'),
+		)
+	);
+}
+add_action( 'init', 'serivce_posttype' );
+
+function serivce_post_type() {
+    $labels = array(
+        'name'                => _x( 'serivce', 'Post Type General Name', 'twentythirteen' ),
+        'singular_name'       => _x( 'serivce', 'Post Type Singular Name', 'twentythirteen' ),
+        'menu_name'           => __( 'serivce', 'twentythirteen' ),
+        'parent_item_colon'   => __( 'Parent serivce', 'twentythirteen' ),
+        'all_items'           => __( 'All serivce', 'twentythirteen' ),
+        'view_item'           => __( 'View serivce', 'twentythirteen' ),
+        'add_new_item'        => __( 'Add New serivce', 'twentythirteen' ),
+        'add_new'             => __( 'Add New', 'twentythirteen' ),
+        'edit_item'           => __( 'Edit serivce', 'twentythirteen' ),
+        'update_item'         => __( 'Update serivce', 'twentythirteen' ),
+        'search_items'        => __( 'Search serivce', 'twentythirteen' ),
+        'not_found'           => __( 'Not Found', 'twentythirteen' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
+    );
+
+	$args = array(
+        'label'               => __( 'serivce', 'twentythirteen' ),
+        'description'         => __( 'serivce news and reviews', 'twentythirteen' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'thumbnail','editor','excerpt','custom-fields' ),
+        'taxonomies'          => array( 'genres' ),
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => "serivce",
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+		'taxonomies'          => array( 'category' ),
+    );
+    register_post_type( 'serivce', $args );
+}
+
+add_action( 'init', 'serivce_post_type', 0 );
+
+function serivce_section(){ 
+	
+	$string .='<div class="row justify-content-center">';
+		$args = array('post_type' => 'serivce', 'posts_per_page' => '3');
+		$loop = new WP_Query( $args );
+		while( $loop->have_posts()) {
+		$loop->the_post();			
+		$url=wp_get_attachment_url( get_post_thumbnail_id(get_the_id()),'thumbnail');
+		$the_title = get_the_title();
+		$the_permalink = get_the_permalink();
+		$content = get_the_content();
+		$the_content = substr($content, 0, 115);
+		$the_excerpt = get_the_excerpt();
+		$the_icon = get_post_meta(get_the_id(), 'icon', true);
+		$string .= '	<div class="col-md-4 icon-bx-wraper">
+						<div class="boximg">
+							<figure><img src="'.$url.'"/></figure>
+						</div>
+						<div class="row row1">
+							<div class="col-md-8">
+								<div class="icon-content">
+									<h4><a href="'.$the_permalink.'">'.$the_title.'</a></h4>
+									<a class="btn-link " href="'.$the_permalink.'">Read More</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="icon-lg"> 
+									<img src="'.$the_icon.'" alt="">
+								</div>							
+							</div>
+						</div>
+					</div>';
+		
+	} $string .= '</div>';
+ 
+return $string; } add_shortcode('serivce_shortcode','serivce_section');
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+POST SHORTCODE
+
+function post_section(){ 
+	
+	$string .='<div class="row multi-row-clearfix">';
+		$args = array('post_type' => 'post', 'posts_per_page' => '3');
+		$loop = new WP_Query( $args );
+		while( $loop->have_posts()) {
+		$loop->the_post();			
+		$url=wp_get_attachment_url( get_post_thumbnail_id(get_the_id()),'thumbnail');
+		$the_title = get_the_title();
+		$the_permalink = get_the_permalink();
+		$content = get_the_content();
+		$the_content = substr($content, 0, 115);
+		$the_excerpt = get_the_excerpt();
+		$the_date= get_the_date();
+		$the_icon = get_post_meta(get_the_id(), 'icon', true);
+		$string .= '						
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+							<article class="post clearfix">
+								<div class="post-thumb">
+									<img src="'.$url.'" alt="">
+								</div>
+								<div class="post-title">
+									<a href="'.$the_permalink.'" title=""><h3>'.$the_title.'</h3></a>
+								</div>
+								<div class="post-meta">
+									<ul class="list-inline">
+										<li><i class="fa fa-user mr-10"></i><a href="'.$the_permalink.'">'.$the_date.'</a></li>
+									</ul>
+								</div>
+								<div class="post-content extra-pra mt-15 mb-15">
+									<p>'.$the_excerpt.' </p>
+								</div>
+								<a href="'.$the_permalink.'" title="" class="btn btn-colored btn-blue btn-sm mr-10">Read more</a>
+								<a href="#" title="" class="btn btn-default btn-blue btn-sm">Like this</a>
+							</article>
+						</div>';
+		
+	} $string .= '</div>';
+ 
+return $string; } add_shortcode('post_shortcode','post_section');
+====================================================================================================================================================================================================
+====================================================================================================================================================================================================
+
+/*Creat Post Code*/
+function product_posttype() {
+	register_post_type( 'product',
+		array(
+			'labels' => array( 'name' => __( 'Our Products' ), 'singular_name' => __( 'product' ) ), 'show_in_rest' => true,
+			'public' => true, 'has_archive' => true, 'rewrite' => array('slug' => 'product'), 'taxonomies' => array( 'category' ),
+		)
+	);
+}
+add_action( 'init', 'product_posttype' );
+function product_post_type() {
+	$args = array(
+        'supports' => array( 'title', 'thumbnail', 'excerpt' ), 'has_archive' => "product", 'taxonomies' => array( 'category'  => 'info-cate' ),
+    );
+    register_post_type( 'product', $args );
+}
+add_action( 'init', 'product_post_type', 0 );
