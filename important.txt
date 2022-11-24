@@ -180,11 +180,31 @@ fisrt add this shortcode
 
 agar products carousel pe hia to apko 
 phly ak new class add karni parygi e.g
-$(".home-products ul.products").addClass("homeproduct owl-carousel owl-theme wow fadeInDown");
-phir slider ky code ko is code ky nichay paste karo
+	$(".home-products ul.products").addClass("homeproduct owl-carousel owl-theme wow fadeInDown");
+phir slider ky code ko is code ky nichay paste karo like is tarah
+	$('.homeproduct').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+
 
 ===========================================================================================
-
 
 
 Search option
@@ -402,7 +422,7 @@ $(window).scroll(function(){
 
 
 CSS
-.fixed {position: fixed;top:0; left:0;width: 100%;  z-index:999;opacity:1;visibility:visible;-ms-animation-name: fadeInDown;-moz-animation-name: fadeInDown;-op-animation-name: fadeInDown;-webkit-animation-name: fadeInDown;animation-name: fadeInDown;-ms-animation-duration: 500ms;-moz-animation-duration: 500ms;-op-animation-duration: 500ms;-webkit-animation-duration: 500ms;animation-duration: 500ms;-ms-animation-timing-function: linear;-moz-animation-timing-function: linear;-op-animation-timing-function: linear;-webkit-animation-timing-function: linear;animation-timing-function: linear;-ms-animation-iteration-count: 1;-moz-animation-iteration-count: 1;-op-animation-iteration-count: 1;-webkit-animation-iteration-count: 1;animation-iteration-count: 1;background: #03103d;-webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 5%); box-shadow: 0px 5px 15px rgb(0 0 0 / 5%);  }
+.fixed {position: fixed;top:0; left:0;width: 100%;  z-index:999;opacity:1;visibility:visible;-ms-animation-name: fadeInDown;-moz-animation-name: fadeInDown;-op-animation-name: fadeInDown;-webkit-animation-name: fadeInDown;animation-name: fadeInDown;-ms-animation-duration: 500ms;-moz-animation-duration: 500ms;-op-animation-duration: 500ms;-webkit-animation-duration: 500ms;animation-duration: 500ms;-ms-animation-timing-function: linear;-moz-animation-timing-function: linear;-op-animation-timing-function: linear;-webkit-animation-timing-function: linear;animation-timing-function: linear;-ms-animation-iteration-count: 1;-moz-animation-iteration-count: 1;-op-animation-iteration-count: 1;-webkit-animation-iteration-count: 1;animation-iteration-count: 1;background: #03103d;box-shadow: 0 0 60px 0 rgb(0 0 0 / 7%);-webkit-box-shadow: 0 10px 15px rgb(25 25 25 / 10%);  }
 
 
 ========================================================================================================================================================================================================================================
@@ -632,3 +652,24 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 	}, false );
 
 ========================================================================================================================================================================================================================================
+
+
+Get Pot id
+
+$id = get_the_ID();
+<div class="col-sm-4 hello" id="post_<?php echo get_the_ID(); ?>" >
+
+</div>
+
+========================================================================================================================================================================================================================================
+
+Thank you page Script
+
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'http://google.com/';
+}, false );
+</script>
+
+========================================================================================================================================================================================================================================
+
