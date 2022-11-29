@@ -1,0 +1,5 @@
+pull updated Branches from remote to local repo
+
+git remote update origin --prune
+
+=========================================================================================================
