@@ -797,8 +797,8 @@ center: true,
 ========================================================================================================================================================================================================================================
 paste this in config.php
 // SMTP email settings
-define( 'SMTP_USER', 'smtp_forms@extreme.com' );
-define( 'SMTP_PASS', 'eXxtRreMeMa$il8075$' );
+define( 'SMTP_USER', 'kholy user ry form name girmin ' ); //e.g smtp_forms@extreme.com
+define( 'SMTP_PASS', 'kholy password girming' );    //e.g eXxtRreMeMa$il8075$
 define( 'SMTP_HOST', 'smtp.dreamhost.com' );
 define( 'SMTP_FROM', 'smtp_forms@extreme.com' );
 define( 'SMTP_NAME', 'Extreme Sports' );
