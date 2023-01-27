@@ -101,6 +101,9 @@ name= Post Types Order
 All wordpress importer
 name = All-in-One WP Migration
 
+Google Reviews
+Widgets for Google Reviews By Trustindex.io
+
 =============================================================
 shortcode without PHP tage
 [gallery_shortcode]
