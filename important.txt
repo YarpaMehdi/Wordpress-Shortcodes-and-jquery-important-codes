@@ -163,9 +163,16 @@ mcdc=13ydXLAX8JQ^lGpMJmYtnRz4
 ===============================================================
 Media Queris
 
-@media (min-width: 0px) and (max-width: 767px){}
-@media (min-width: 768px) and (max-width: 1023px){}
-@media (min-width: 1024px) and (max-width: 1440px){}
+@media (min-width: 1024px) and (max-width: 1440px){
+
+}
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+@media (min-width: 0px) and (max-width: 767px){
+
+}
+
 
 ========================================================================================
 constant image in custome post
