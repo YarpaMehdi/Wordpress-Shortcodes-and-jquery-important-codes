@@ -58,6 +58,17 @@ Dynamic Menu
 	wp_nav_menu($defaults); 
 ?>
 ======================================================
+get current post acf field wp shortcode function
+function get_acf_field_shortcode() {
+   
+
+    $field_value = get_field('blog_contact_button_text');
+
+    echo $field_value ? "<h2>".esc_html($field_value)."</h2>" : '<h2>"Ask us how Calnetic can help your business with this"</h2>';
+}
+add_shortcode('get_acf_field_shortcode', 'get_acf_field_shortcode');
+
+======================================================
 
 Custome theme Options
 <?php echo $options['logourl']?>
