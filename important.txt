@@ -868,4 +868,57 @@ Accordian custom stylilng
 	padding: 20px 25px;
 }
 
+==========================================================================================================================
+
+Wordpress admin login autocomplete disable
+
+// 1. Output Buffering Start karein
+function start_login_buffer() {
+    ob_start();
+}
+add_action('login_head', 'start_login_buffer');
+
+// 2. 
+function end_login_buffer() {
+    $html = ob_get_clean();
+
+   
+    $html = str_replace(
+        'name="log"', 
+        'name="log" autocomplete="off" readonly onfocus="this.removeAttribute(\'readonly\');"', 
+        $html
+    );
+
+    // Password field  autocomplete change 
+    $html = str_replace(
+        'name="pwd"', 
+        'name="pwd" autocomplete="new-password" readonly onfocus="this.removeAttribute(\'readonly\');"', 
+        $html
+    );
+    
+  
+    echo $html;
+}
+add_action('login_footer', 'end_login_buffer');
+
+// 3. Extra JavaScript Saftey 
+function clear_login_fields_js() {
+    ?>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var user = document.getElementById('user_login');
+                var pass = document.getElementById('user_pass');
+                
+                if(user) { user.value = ''; }
+                if(pass) { pass.value = ''; }
+            }, 100); // 100ms delay taake browser fill karne k baad wapis clear hojaye
+        });
+    </script>
+    <?php
+}
+add_action('login_footer', 'clear_login_fields_js');
+
+=========================================================================================
+
 
